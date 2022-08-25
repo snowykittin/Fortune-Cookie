@@ -32,12 +32,16 @@ class FortuneCookie extends RandomPicker{
     getFortune(){
         let reply = this.pickRandom();
         this.outputElement.innerHTML = reply;
+
+        //Changes which button is shown
         openCookie.style.display = "none";
         getCookie.style.display = "inline";
     }
 
     newCookie(){
         this.outputElement.innerHTML = "Please open your cookie.";
+
+        //Changes which button is shown
         openCookie.style.display = "inline";
         getCookie.style.display = "none";
     }
