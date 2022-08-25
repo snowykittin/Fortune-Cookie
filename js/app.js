@@ -3,6 +3,11 @@ NEWM-N 320
 August 25, 2022*/
 
 
+//Get the button IDs for showing/hiding
+let openCookie = document.getElementById("openCookie");
+let getCookie = document.getElementById("getCookie");
+
+
 class RandomPicker{
     
     //list of all the items to be selected from randomly
@@ -27,10 +32,14 @@ class FortuneCookie extends RandomPicker{
     getFortune(){
         let reply = this.pickRandom();
         this.outputElement.innerHTML = reply;
+        openCookie.style.display = "none";
+        getCookie.style.display = "inline";
     }
 
     newCookie(){
         this.outputElement.innerHTML = "Please open your cookie.";
+        openCookie.style.display = "inline";
+        getCookie.style.display = "none";
     }
 }
 
